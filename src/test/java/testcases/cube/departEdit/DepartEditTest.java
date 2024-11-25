@@ -67,7 +67,7 @@ public class  DepartEditTest extends BaseFile {
 
 	// This method is used to read from excel.
 
-	@DataProvider(name = "loginPageDataProvider")
+	@DataProvider(name = "depEditPageDataProvider")
 	private Map<String, Object>[][] callTestDataFromExcel() throws Exception {
 		String testDataSheet = propReader.getProp().get(SHEET_NAME).toString().trim();
 		String filePath = System.getProperty("user.dir") + propReader.getProp().get(TESTCASES_SHEET).toString().trim();
@@ -83,7 +83,7 @@ public class  DepartEditTest extends BaseFile {
 		}
 	}
 
-	@Test(dataProvider = "loginPageDataProvider")
+	@Test(dataProvider = "depEditPageDataProvider")
 	private void cubeDepartEdit(Map<String, Object> fetchData) throws InterruptedException {
 
 		if (fetchData.entrySet() != null) {
@@ -91,24 +91,13 @@ public class  DepartEditTest extends BaseFile {
 
 			    String testCase= null;
 				String testId = null;
-//				String depName = null;
-//				String depType = null;
-		    String Subname = null;
-//			    String remarks = null;
-//			    String EnterSubname = null ;
+				String subName = null;
+		   
 
 				try {
 					JSONObject testData = (JSONObject) entry.getValue();
 					testCase = new String((String) testData.get("TEST_CASES")).toString();
-//					depType = new String((String) testData.get("Department Type")).toString();
-//					depName = new String((String) testData.get("Department Name")).toString();
-					Subname =dEdit.generateRandomAlpha(); //random values 
-//					//EnterSubname = depPages.generateRandomAlpha(); //random values
-					testId = new String ((String) testData.get("TEST_ID"));
-//					remarks = new String((String) testData.get("Remarks")).toString();
-					
-					
-				
+					subName =dEdit.generateRandomAlpha(); //random values 
 
 				} catch (Exception e1) {
 					
@@ -132,38 +121,29 @@ public class  DepartEditTest extends BaseFile {
 					WebElement element = driver.findElement(By.xpath("(//*[@value='Edit'])[1]"));
 					
 					JavascriptExecutor js = (JavascriptExecutor) driver;
-					
-				
+									
 					js.executeScript("arguments[0].click();", element);
 
-				
-					
 					
 					if(testId.equals("1")) {
-							//driver.findElement(By.xpath("//*[text()='" + Subname + "']")).click();
-						//hrPages.EnterText(Remark,hrPages.remarks_HR);
-							dEdit.EnterText(Subname,dEdit.editSubName);
+
+							dEdit.EnterText(subName,dEdit.editSubName);
 							Thread.sleep(2000);
-
-						dEdit.click(dEdit.updateBtn);
-						Thread.sleep(2000);
-						
-						dEdit.waitForAlertAndAccept();
-						
-
+	
+							dEdit.click(dEdit.updateBtn);
+							Thread.sleep(2000);
+							
+							dEdit.waitForAlertAndAccept();
 					}
 
 					else if(testId.equals("2")) {
-							//driver.findElement(By.xpath("//*[text()='" + Subname + "']")).click();
-						
-						dEdit.EnterText(Subname,dEdit.editSubName);
+							dEdit.EnterText(subName,dEdit.editSubName);
 							Thread.sleep(2000);
-
-						dEdit.click(dEdit.updateBtn);
-						Thread.sleep(2000);
-						
-						dEdit.waitForAlertAndAccept();
-						
+	
+							dEdit.click(dEdit.updateBtn);
+							Thread.sleep(2000);
+							
+							dEdit.waitForAlertAndAccept();
 
 					}
 			}

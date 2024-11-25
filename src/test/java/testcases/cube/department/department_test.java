@@ -170,10 +170,7 @@ public class  department_test extends BaseFile {
 						//Thread.sleep(2000);
 						depPages.click(depPages.sub_dep);
 						depPages.EnterText(enterSubname,depPages.enter_sub);
-					//	depPages.EnterText(remarks,depPages.remarkss);
-//						WebElement fileUploadField = driver.findElement(By.xpath("//input[@id='MainContent_col_2_file_upload']")); // Replace with the actual locator
-//						String filePath = "/home/chahetibhandari/ecliplesqa/CUBEautomation/image/testPIC.png"; // Replace with the actual file path
-//						depPages.filebtn.sendKeys(filePath);
+
 						depPages.click(depPages.submitbtn);
 						depPages.waitForAlertAndAccept();
 				}else if(testId.equals("6")) {
@@ -183,10 +180,7 @@ public class  department_test extends BaseFile {
 					//Thread.sleep(2000);
 					depPages.click(depPages.sub_dep);
 					depPages.EnterText(enterSubname,depPages.enter_sub);
-				//	depPages.EnterText(remarks,depPages.remarkss);
-//					WebElement fileUploadField = driver.findElement(By.xpath("//input[@id='MainContent_col_2_file_upload']")); // Replace with the actual locator
-//					String filePath = "/home/chahetibhandari/ecliplesqa/CUBEautomation/image/testPIC.png"; // Replace with the actual file path
-//					depPages.filebtn.sendKeys(filePath);
+
 					depPages.click(depPages.submitbtn);
 					depPages.waitForAlertAndAccept();
 			}else if(testId.equals("7")) {
@@ -196,26 +190,19 @@ public class  department_test extends BaseFile {
 				//Thread.sleep(2000);
 				depPages.click(depPages.sub_dep);
 				depPages.EnterText(enterSubname,depPages.enter_sub);
-			//	depPages.EnterText(remarks,depPages.remarkss);
-//				WebElement fileUploadField = driver.findElement(By.xpath("//input[@id='MainContent_col_2_file_upload']")); // Replace with the actual locator
-//				String filePath = "/home/chahetibhandari/ecliplesqa/CUBEautomation/image/testPIC.png"; // Replace with the actual file path
-//				depPages.filebtn.sendKeys(filePath);
+
 				depPages.click(depPages.submitbtn);
 				depPages.waitForAlertAndAccept();
 		}else if(testId.equals("8")) {
 			depPages.clickelement(depPages.select_drop);
 			driver.findElement(By.xpath("//*[text()='" + depType + "']")).click();
 			driver.findElement(By.xpath("//*[text()='" +  depName + "']")).click();
-			//Thread.sleep(2000);
+			
 			depPages.click(depPages.sub_dep);
 			depPages.EnterText(enterSubname,depPages.enter_sub);
-			//depPages.EnterText(remarks,depPages.remarkss);
-//			WebElement fileUploadField = driver.findElement(By.xpath("//input[@id='MainContent_col_2_file_upload']")); // Replace with the actual locator
-//			String filePath = "/home/chahetibhandari/ecliplesqa/CUBEautomation/image/testPIC.png"; // Replace with the actual file path
-//			depPages.filebtn.sendKeys(filePath);
 			depPages.click(depPages.submitbtn);
 			depPages.waitForAlertAndAccept();
-		//	depPages.click(depPages.logoutint);
+
 		}else if(testId.equals("9")) {
 			depPages.clickelement(depPages.select_drop);
 			driver.findElement(By.xpath("//*[text()='" + depType + "']")).click();
@@ -223,10 +210,6 @@ public class  department_test extends BaseFile {
 			//Thread.sleep(2000);
 			depPages.click(depPages.sub_dep);
 			depPages.EnterText(enterSubname,depPages.enter_sub);
-		//	depPages.EnterText(remarks,depPages.remarkss);
-//			WebElement fileUploadField = driver.findElement(By.xpath("//input[@id='MainContent_col_2_file_upload']")); // Replace with the actual locator
-//			String filePath = "/home/chahetibhandari/ecliplesqa/CUBEautomation/image/testPIC.png"; // Replace with the actual file path
-//			depPages.filebtn.sendKeys(filePath);
 			depPages.click(depPages.submitbtn);
 			depPages.waitForAlertAndAccept();
 		}
@@ -237,16 +220,12 @@ public class  department_test extends BaseFile {
 			//Thread.sleep(2000);
 			depPages.click(depPages.sub_dep);
 			depPages.EnterText(enterSubname,depPages.enter_sub);
-		//	depPages.EnterText(remarks,depPages.remarkss);
-//			WebElement fileUploadField = driver.findElement(By.xpath("//input[@id='MainContent_col_2_file_upload']")); // Replace with the actual locator
-//			String filePath = "/home/chahetibhandari/ecliplesqa/CUBEautomation/image/testPIC.png"; // Replace with the actual file path
-//			depPages.filebtn.sendKeys(filePath);
 			depPages.click(depPages.submitbtn);
 			depPages.waitForAlertAndAccept();
 								
 		    depPages.click(depPages.logoutint);
 		}		
-					}
+	}
 			
 				catch (org.openqa.selenium.NoSuchElementException e) {
 					

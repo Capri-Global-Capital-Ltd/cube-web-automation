@@ -89,7 +89,7 @@ public class CubeLoginTest extends BaseFile {
 					testCase = new String((String) testData.get("TESTCASE"));
 					emailCred = new String((String) testData.get("LOGIN")).toString();
 					passCred = new String((String) testData.get("PASS")).toString();
-				messageData = new String((String) testData.get("MESSAGE"));
+					messageData = new String((String) testData.get("MESSAGE"));
 					testId = new String ((String) testData.get("TESTID"));
 				
 
@@ -103,9 +103,9 @@ public class CubeLoginTest extends BaseFile {
 					if(testId.equals("1")) {
 
 					
-					loginPage.passWord(passCred);
-					loginPage.loginCredential(emailCred);
-					loginPage.clickloginButton();
+						loginPage.passWord(passCred);
+						loginPage.loginCredential(emailCred);
+						loginPage.clickloginButton();
 					
 					Thread.sleep(2000);
 					}
@@ -119,10 +119,10 @@ public class CubeLoginTest extends BaseFile {
 						}
 					else if(testId.equals("2")) {
 
-					loginPage.loginCredential(emailCred);
-					loginPage.passWord(passCred);
-					loginPage.clickloginButton();
-					Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
+						loginPage.loginCredential(emailCred);
+						loginPage.passWord(passCred);
+						loginPage.clickloginButton();
+						Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
 				
 					}
 					else if(testId.equals("4")) {

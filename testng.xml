@@ -10,9 +10,8 @@
 		<parameter name="browser" value="chrome" />
 
 		<classes>
-		<class name="testcases.cube.login.CubeLoginTest" />
-		<class name="testcases.cube.department.department_test"/>
-		
+			<class name="testcases.cube.departmentHRLogin.HRloginTest"/>
+			<class name="testcases.cube.departmentHRScreen.HRScreenTest"/>
 		</classes>
 		
 	</test> <!-- Test -->

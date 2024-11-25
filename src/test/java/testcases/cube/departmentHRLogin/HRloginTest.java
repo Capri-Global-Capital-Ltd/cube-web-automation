@@ -51,7 +51,7 @@ public class HRloginTest extends BaseFile {
 
 	// This method is used to read from excel.
 
-	@DataProvider(name = "loginPageDataProvider")
+	@DataProvider(name = "HRloginPageDataProvider")
 	private Map<String, Object>[][] callTestDataFromExcel() throws Exception {
 		String testDataSheet = propReader.getProp().get(SHEET_NAME).toString().trim();
 		String filePath = System.getProperty("user.dir") + propReader.getProp().get(TESTCASES_SHEET).toString().trim();
@@ -67,7 +67,7 @@ public class HRloginTest extends BaseFile {
 		}
 	}
 
-	@Test(dataProvider = "loginPageDataProvider")
+	@Test(dataProvider = "HRloginPageDataProvider")
 	private void cubeHRLogin(Map<String, Object> fetchData) throws InterruptedException {
 
 		if (fetchData.entrySet() != null) {

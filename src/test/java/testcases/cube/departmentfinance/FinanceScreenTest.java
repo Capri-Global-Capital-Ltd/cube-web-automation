@@ -61,7 +61,7 @@ public class  FinanceScreenTest extends BaseFile {
 
 	// This method is used to read from excel.
 
-	@DataProvider(name = "loginPageDataProvider")
+	@DataProvider(name = "FinPageDataProvider")
 	private Map<String, Object>[][] callTestDataFromExcel() throws Exception {
 		String testDataSheet = propReader.getProp().get(SHEET_NAME).toString().trim();
 		String filePath = System.getProperty("user.dir") + propReader.getProp().get(TESTCASES_SHEET).toString().trim();
@@ -77,7 +77,7 @@ public class  FinanceScreenTest extends BaseFile {
 		}
 	}
 
-	@Test(dataProvider = "loginPageDataProvider")
+	@Test(dataProvider = "FinPageDataProvider")
 	public void cubeFinanceScreen(Map<String, Object> fetchData) throws InterruptedException {
 		   CubeLoginTest clogin = new CubeLoginTest();
 		   

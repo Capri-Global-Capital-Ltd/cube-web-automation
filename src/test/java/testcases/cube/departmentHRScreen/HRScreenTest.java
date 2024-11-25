@@ -56,7 +56,7 @@ public class  HRScreenTest extends BaseFile {
 		 
 	}
 
-	// This method isused to read from excel.
+	// This method is used to read from excel.
 
 	@DataProvider(name ="HRScreenDataProvider")
 	private Map<String, Object>[][] callTestDataFromExcel() throws Exception {
@@ -74,7 +74,7 @@ public class  HRScreenTest extends BaseFile {
 		}
 	}
 
-	@Test(dataProvider = "loginPageDataProvider")
+	@Test(dataProvider = "HRScreenDataProvider")
 	private void cubeHRScreen(Map<String, Object> fetchData) throws InterruptedException {
 
 		if (fetchData.entrySet() != null) {
@@ -110,30 +110,40 @@ public class  HRScreenTest extends BaseFile {
 						System.out.println("Number of iframes on the page: " + iframes.size());
 						driver.switchTo().frame("jsFrame"); 
 						hrPages.EnterText(Remark,hrPages.remarks_HR);         
-						
-					hrPages.JavaScriptclick(hrPages.approvalBtn);
-	   				//Thread.sleep(2000);
-					hrPages.waitForAlertAndAccept();
-					driver.switchTo().defaultContent();
-					//Thread.sleep(1000);
+						WebElement fileUploadField = driver.findElement(By.xpath("/html/body/div[8]/div/form/div[3]/div[4]/fieldset/table/tbody/tr[2]/td[2]/input")); // Replace with the actual locator
+						String filePath = "/home/chahetibhandari/ecliplesqa/CUBEautomation/image/testPIC.png"; // Replace with the actual file path
+						hrPages.filebtn.sendKeys(filePath);
+						Thread.sleep(2000);
+						hrPages.JavaScriptclick(hrPages.approvalBtn);
+		   				//Thread.sleep(2000);
+						hrPages.waitForAlertAndAccept();
+						driver.switchTo().defaultContent();
+						//Thread.sleep(1000);
 			}
 				else if(testId.equals("2")) {
 				
-					List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
-					System.out.println("Number of iframes on the page: " + iframes.size());
-					driver.switchTo().frame("jsFrame"); 
-					hrPages.EnterText(Remark,hrPages.remarks_HR);         
-					hrPages.JavaScriptclick(hrPages.disapprovalBtn);
-	   				Thread.sleep(2000);
-					hrPages.waitForAlertAndAccept();
-					driver.switchTo().defaultContent();
+						List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
+						System.out.println("Number of iframes on the page: " + iframes.size());
+						driver.switchTo().frame("jsFrame"); 
+						hrPages.EnterText(Remark,hrPages.remarks_HR);         
+						
+						WebElement fileUploadField = driver.findElement(By.xpath("/html/body/div[8]/div/form/div[3]/div[4]/fieldset/table/tbody/tr[2]/td[2]/input")); // Replace with the actual locator
+						String filePath = "/home/chahetibhandari/ecliplesqa/CUBEautomation/image/testPIC.png"; // Replace with the actual file path
+						hrPages.filebtn.sendKeys(filePath);
+		   				Thread.sleep(2000);
+		   				hrPages.JavaScriptclick(hrPages.disapprovalBtn);
+						hrPages.waitForAlertAndAccept();
+						driver.switchTo().defaultContent();
 		}
 				else	if(testId.equals("3")) 
 					{
 						List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
 						System.out.println("Number of iframes on the page: " + iframes.size());
 						driver.switchTo().frame("jsFrame"); 
-						hrPages.EnterText(Remark,hrPages.remarks_HR);         
+						hrPages.EnterText(Remark,hrPages.remarks_HR); 
+						WebElement fileUploadField = driver.findElement(By.xpath("/html/body/div[8]/div/form/div[3]/div[4]/fieldset/table/tbody/tr[2]/td[2]/input")); // Replace with the actual locator
+						String filePath = "/home/chahetibhandari/ecliplesqa/CUBEautomation/image/testPIC.png"; // Replace with the actual file path
+						hrPages.filebtn.sendKeys(filePath);
 						hrPages.JavaScriptclick(hrPages.approvalBtn);
 						hrPages.waitForAlertAndAccept();
 						driver.switchTo().defaultContent();

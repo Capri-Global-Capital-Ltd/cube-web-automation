@@ -57,6 +57,10 @@ public class HRScreen extends CommonKeyWords {
 	
     @FindBy(xpath="//a[@class='lbtn']")
     public WebElement exitbtn;
+    
+    @FindBy(xpath="/html/body/div[8]/div/form/div[3]/div[4]/fieldset/table/tbody/tr[2]/td[2]/input")
+    public WebElement filebtn;
+    
    
 	public String validatePopUPInvalidCredential() {
 		Alert alert = driver.switchTo().alert();
