@@ -3,7 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.customer.dedupe.DedupeTest">
+      <class name="testcases.cube.departEdit.DepartEditTest">
         <methods>
           <include name="closedriver"/>
           <include name="swarnimLoginPage"/>
@@ -12,7 +12,7 @@
           <include name="navigateToBaseURL"/>
           <include name="flushReport"/>
         </methods>
-      </class> <!-- testcases.customer.dedupe.DedupeTest -->
+      </class> <!-- testcases.cube.departEdit.DepartEditTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

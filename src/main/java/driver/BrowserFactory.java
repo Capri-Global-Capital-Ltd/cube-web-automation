@@ -20,7 +20,11 @@ public class BrowserFactory {
 	public WebDriver initializeDriver(String browser) {
 		if (browser.equalsIgnoreCase("chrome")) {
 			ChromeOptions options = new ChromeOptions();
-//			options.addArguments("--headless");
+			options.addArguments("--allow-insecure-localhost");
+			options.addArguments("--incognito");
+			options.addArguments("--disable-extensions");
+			 options.addArguments("--ignore-certificate-errors");
+	//	options.addArguments("--headless");
 //			options.addArguments("--disable-gpu"); // Disable GPU hardware acceleration
 //			options.addArguments("--no-sandbox"); // Added for Linux to avoid sandbox issues
 //			options.addArguments("--disable-dev-shm-usage"); // Overcome limited resource problems

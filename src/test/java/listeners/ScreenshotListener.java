@@ -33,6 +33,10 @@ public class ScreenshotListener implements ITestListener {
 			File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 			String fileName = result.getName() + "_" + timeStamp + ".png";
+			File screenshotsDir = new File("Screenshots");
+	        if (!screenshotsDir.exists()) {
+	            screenshotsDir.mkdirs(); // Create the directory if it doesn't exist
+	        }
 
 			try {
 				FileHandler.copy(srcFile, new File("Screenshots/" + fileName));

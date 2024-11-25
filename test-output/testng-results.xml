@@ -2,26 +2,26 @@
 <testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-21T10:17:13 IST" name="Default suite" finished-at="2024-08-21T10:17:13 IST" duration-ms="469">
+  <suite started-at="2024-11-21T12:05:09 IST" name="Default suite" finished-at="2024-11-21T12:05:10 IST" duration-ms="444">
     <groups>
     </groups>
-    <test started-at="2024-08-21T10:17:13 IST" name="Default test" finished-at="2024-08-21T10:17:13 IST" duration-ms="469">
-      <class name="testcases.customer.dedupe.DedupeTest">
-        <test-method is-config="true" signature="callBaseReport()[pri:0, instance:testcases.customer.dedupe.DedupeTest@6b09fb41]" started-at="2024-08-21T10:17:12 IST" name="callBaseReport" finished-at="2024-08-21T10:17:13 IST" duration-ms="182" status="PASS">
+    <test started-at="2024-11-21T12:05:09 IST" name="Default test" finished-at="2024-11-21T12:05:10 IST" duration-ms="444">
+      <class name="testcases.cube.departEdit.DepartEditTest">
+        <test-method is-config="true" signature="callBaseReport()[pri:0, instance:testcases.cube.departEdit.DepartEditTest@609e8838]" started-at="2024-11-21T12:05:09 IST" name="callBaseReport" finished-at="2024-11-21T12:05:09 IST" duration-ms="202" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- callBaseReport -->
-        <test-method is-config="true" signature="calldriver(java.lang.String)[pri:0, instance:testcases.customer.dedupe.DedupeTest@6b09fb41]" started-at="2024-08-21T10:17:13 IST" name="calldriver" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1724215633063" status="FAIL">
+        <test-method is-config="true" signature="calldriver(java.lang.String)[pri:0, instance:testcases.cube.departEdit.DepartEditTest@609e8838]" started-at="2024-11-21T12:05:09 IST" name="calldriver" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1732170909825" status="FAIL">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'browser' is required by BeforeTest on method calldriver but has not been marked @Optional or defined
-in /tmp/testng-eclipse--491158205/testng-customsuite.xml]]>
+in /tmp/testng-eclipse-235353735/testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'browser' is required by BeforeTest on method calldriver but has not been marked @Optional or defined
-in /tmp/testng-eclipse--491158205/testng-customsuite.xml
+in /tmp/testng-eclipse-235353735/testng-customsuite.xml
 at org.testng.internal.Parameters.createParams(Parameters.java:264)
 at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
 at org.testng.internal.Parameters.createParameters(Parameters.java:690)
@@ -49,15 +49,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- calldriver -->
-        <test-method is-config="true" signature="navigateToBaseURL()[pri:0, instance:testcases.customer.dedupe.DedupeTest@6b09fb41]" started-at="2024-08-21T10:17:13 IST" name="navigateToBaseURL" finished-at="2024-08-21T10:17:13 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="navigateToBaseURL()[pri:0, instance:testcases.cube.departEdit.DepartEditTest@609e8838]" started-at="2024-11-21T12:05:10 IST" name="navigateToBaseURL" finished-at="2024-11-21T12:05:10 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToBaseURL -->
-        <test-method signature="swarnimLoginPage(java.util.Map)[pri:0, instance:testcases.customer.dedupe.DedupeTest@6b09fb41]" started-at="2024-08-21T10:17:13 IST" name="swarnimLoginPage" data-provider="customerDedupeDataProvider" finished-at="2024-08-21T10:17:13 IST" duration-ms="0" status="SKIP">
+        <test-method signature="swarnimLoginPage(java.util.Map)[pri:0, instance:testcases.cube.departEdit.DepartEditTest@609e8838]" started-at="2024-11-21T12:05:10 IST" name="swarnimLoginPage" data-provider="loginPageDataProvider" finished-at="2024-11-21T12:05:10 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Sheet1rowNum1={"Firstname":"Nikhil","TestID":"TC_01","Fathername":"DeepChand","Lastname ":"jaiswal","DOB_date":"1","Message":"message","DOB_Year":"2000","Test_Senario":"validating the Positive journey","mobile_Number":"9889539669","PAN":"BQTPJ1249D","DOB_month":"2"}}]]>
+                <![CDATA[{Sheet6rowNum1={"Sub Department Name":"TESTING VALUE","TEST_CASES":"To edit sub department name","TEST_ID":"1"}}]]>
               </value>
             </param>
           </params>
@@ -65,12 +65,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
             <message>
               <![CDATA[
 Parameter 'browser' is required by BeforeTest on method calldriver but has not been marked @Optional or defined
-in /tmp/testng-eclipse--491158205/testng-customsuite.xml]]>
+in /tmp/testng-eclipse-235353735/testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'browser' is required by BeforeTest on method calldriver but has not been marked @Optional or defined
-in /tmp/testng-eclipse--491158205/testng-customsuite.xml
+in /tmp/testng-eclipse-235353735/testng-customsuite.xml
 at org.testng.internal.Parameters.createParams(Parameters.java:264)
 at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
 at org.testng.internal.Parameters.createParameters(Parameters.java:690)
@@ -98,15 +98,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- swarnimLoginPage -->
-        <test-method is-config="true" signature="closedriver()[pri:0, instance:testcases.customer.dedupe.DedupeTest@6b09fb41]" started-at="2024-08-21T10:17:13 IST" name="closedriver" finished-at="2024-08-21T10:17:13 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="closedriver()[pri:0, instance:testcases.cube.departEdit.DepartEditTest@609e8838]" started-at="2024-11-21T12:05:10 IST" name="closedriver" finished-at="2024-11-21T12:05:10 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closedriver -->
-        <test-method is-config="true" signature="flushReport()[pri:0, instance:testcases.customer.dedupe.DedupeTest@6b09fb41]" started-at="2024-08-21T10:17:13 IST" name="flushReport" finished-at="2024-08-21T10:17:13 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:testcases.cube.departEdit.DepartEditTest@609e8838]" started-at="2024-11-21T12:05:10 IST" name="flushReport" finished-at="2024-11-21T12:05:10 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
-      </class> <!-- testcases.customer.dedupe.DedupeTest -->
+      </class> <!-- testcases.cube.departEdit.DepartEditTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

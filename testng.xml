@@ -6,15 +6,14 @@
 		<listener class-name="listeners.ScreenshotListener" />					
 	</listeners>
 
-	<test thread-count="5" name="chromeTest">
+	<test thread-count="1" name="chromeTest">
 		<parameter name="browser" value="chrome" />
 
 		<classes>
-			<class name="testcases.login.LoginTest" />
-			<class name="testcases.login.BranchListingTest" />
-			<class name="testcases.customer.dedupe.DedupeTest" />
-			<class name="testcases.customer.creation.KYCTest" />
-
+		<class name="testcases.cube.login.CubeLoginTest" />
+		<class name="testcases.cube.department.department_test"/>
+		
 		</classes>
+		
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -2,6 +2,9 @@ package common;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Random;
+
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -18,9 +21,29 @@ public class CommonKeyWords {
 
 	public CommonKeyWords(WebDriver driver, long timeoutInSeconds) {
 		this.driver = driver;
-		wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 	}
+	
+	
+	public static String generateRandomAlpha() {
+        StringBuilder stringBuilder = new StringBuilder();
+        Random random = new Random();
+        int length =7;
 
+        for (int i = 0; i < length; i++) {
+            // Generate a random character: A-Z or a-z
+        	char randomChar = (char) (random.nextBoolean()
+                    ? 'A' + random.nextInt(26)  // Uppercase letters                    
+                    : 'a' + random.nextInt(26)  // Lowercase letters
+            );
+            stringBuilder.append(randomChar);
+        }
+        return stringBuilder.toString();
+    }
+
+ 
+
+	
 	public void click(WebElement element) {
 		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
 	}
@@ -96,5 +119,14 @@ public class CommonKeyWords {
 	public void getURL(WebElement element, String Text) {
 		driver.get(Text);
 	}
+	
+	public void waitForAlertAndAccept() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+		alert.accept();
+	}
+	
+	JavascriptExecutor js = (JavascriptExecutor) driver;
 
+	
 }
