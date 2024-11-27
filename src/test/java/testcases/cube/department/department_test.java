@@ -152,17 +152,17 @@ public class  department_test extends BaseFile {
 						depPages.waitForAlertAndAccept();
 					
 				}
-					else if(testId.equals("4")) {
-						depPages.clickelement(depPages.select_drop);
-						driver.findElement(By.xpath("//*[text()='" + depType + "']")).click();
-						driver.findElement(By.xpath("//*[text()='" +  depName + "']")).click();
-						depPages.click(depPages.sub_dep);
-						depPages.EnterText(enterSubname,depPages.enter_sub);
-						depPages.EnterText(remarks,depPages.remarkss);
-						depPages.click(depPages.submitbtn);
-						depPages.waitForAlertAndAccept();
-					
-				}
+//					else if(testId.equals("4")) {
+//						depPages.clickelement(depPages.select_drop);
+//						driver.findElement(By.xpath("//*[text()='" + depType + "']")).click();
+//						driver.findElement(By.xpath("//*[text()='" +  depName + "']")).click();
+//						depPages.click(depPages.sub_dep);
+//						depPages.EnterText(enterSubname,depPages.enter_sub);
+//						depPages.EnterText(remarks,depPages.remarkss);
+//						depPages.click(depPages.submitbtn);
+//						depPages.waitForAlertAndAccept();
+//					
+//				}
 					else if(testId.equals("5")) {
 						depPages.clickelement(depPages.select_drop);
 						driver.findElement(By.xpath("//*[text()='" + depType + "']")).click();

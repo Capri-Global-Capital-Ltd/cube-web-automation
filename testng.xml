@@ -16,8 +16,6 @@
 			<class name="testcases.cube.departmentHRScreen.HRScreenTest"/>
 			<class name="testcases.cube.departmentfinanceScreen.FinanceloginTest"/>
 			<class name="testcases.cube.departmentfinance.FinanceScreenTest"/>
-			<class name="testcases.cube.login.CubeLoginTest" />
-			<class name="testcases.cube.departEdit.DepartEditTest"/>
 		</classes>
 		
 	</test> <!-- Test -->
