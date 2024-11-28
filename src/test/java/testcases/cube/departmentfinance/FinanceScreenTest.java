@@ -106,7 +106,7 @@ public class  FinanceScreenTest extends BaseFile {
 					test = extent.createTest(testCase);
 
 				try {
-					
+					driver.get("https://cubeuat.capriglobal.in:8012/Admin/Default.aspx");
 					 FinPages.clickelement(FinPages.online_re);
 			         Thread.sleep(2000);
 

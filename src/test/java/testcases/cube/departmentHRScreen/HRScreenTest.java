@@ -111,8 +111,8 @@ public class  HRScreenTest extends BaseFile {
 						driver.switchTo().frame("jsFrame"); 
 						hrPages.EnterText(Remark,hrPages.remarks_HR);         
 						WebElement fileUploadField = driver.findElement(By.xpath("/html/body/div[8]/div/form/div[3]/div[4]/fieldset/table/tbody/tr[2]/td[2]/input")); // Replace with the actual locator
-						String filePath = "/home/chahetibhandari/ecliplesqa/CUBEautomation/image/testPIC.png"; // Replace with the actual file path
-						hrPages.filebtn.sendKeys(filePath);
+						String filePath = propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
+						//hrPages.filebtn.sendKeys(filePath);
 						Thread.sleep(2000);
 						hrPages.JavaScriptclick(hrPages.approvalBtn);
 		   				//Thread.sleep(2000);
@@ -128,8 +128,8 @@ public class  HRScreenTest extends BaseFile {
 						hrPages.EnterText(Remark,hrPages.remarks_HR);         
 						
 						WebElement fileUploadField = driver.findElement(By.xpath("/html/body/div[8]/div/form/div[3]/div[4]/fieldset/table/tbody/tr[2]/td[2]/input")); // Replace with the actual locator
-						String filePath = "Image"; // Replace with the actual file path
-						hrPages.filebtn.sendKeys(filePath);
+						String filePath = propReader.getProp().get("Image").toString().trim();// Replace with the actual file path
+						//hrPages.filebtn.sendKeys(filePath);
 		   				Thread.sleep(2000);
 		   				hrPages.JavaScriptclick(hrPages.disapprovalBtn);
 						hrPages.waitForAlertAndAccept();
@@ -142,8 +142,8 @@ public class  HRScreenTest extends BaseFile {
 						driver.switchTo().frame("jsFrame"); 
 						hrPages.EnterText(Remark,hrPages.remarks_HR); 
 						WebElement fileUploadField = driver.findElement(By.xpath("/html/body/div[8]/div/form/div[3]/div[4]/fieldset/table/tbody/tr[2]/td[2]/input")); // Replace with the actual locator
-						String filePath = "/home/chahetibhandari/ecliplesqa/CUBEautomation/image/testPIC.png"; // Replace with the actual file path
-						hrPages.filebtn.sendKeys(filePath);
+						String filePath = propReader.getProp().get("Image").toString().trim();// Replace with the actual file path
+						//hrPages.filebtn.sendKeys(filePath);
 						hrPages.JavaScriptclick(hrPages.approvalBtn);
 						hrPages.waitForAlertAndAccept();
 						driver.switchTo().defaultContent();
@@ -159,6 +159,16 @@ public class  HRScreenTest extends BaseFile {
 					driver.switchTo().defaultContent();
 		}
 				else	if(testId.equals("5")) 
+				{
+					List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
+					System.out.println("Number of iframes on the page: " + iframes.size());
+					driver.switchTo().frame("jsFrame"); 
+					hrPages.EnterText(Remark,hrPages.remarks_HR);         
+					hrPages.JavaScriptclick(hrPages.approvalBtn);
+					hrPages.waitForAlertAndAccept();
+					driver.switchTo().defaultContent();
+		}
+				else	if(testId.equals("6")) 
 				{
 					List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
 					System.out.println("Number of iframes on the page: " + iframes.size());
