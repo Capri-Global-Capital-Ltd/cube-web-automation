@@ -102,13 +102,14 @@ public class  department_test extends BaseFile {
 					test = extent.createTest(testCase);
 
 				try {
-					
+					driver.get("https://cubeuat.capriglobal.in:8012/Admin/Default.aspx");
 				    depPages.clickelement(depPages.online_re);
 					Actions actions = new Actions(driver);
 					actions.scrollByAmount(1, 10000).perform(); // Scroll down by 500 pixels
 					actions.moveToElement(depPages.Department_Control).perform();
 					//Thread.sleep(2000); //hover 
 					depPages.clickelement(depPages.Initiate);
+					
 						if(testId.equals("1")) {
 						depPages.clickelement(depPages.select_drop);
 						driver.findElement(By.xpath("//*[text()='" + depType + "']")).click();
@@ -146,7 +147,7 @@ public class  department_test extends BaseFile {
 						depPages.click(depPages.sub_dep);
 						depPages.EnterText(enterSubname,depPages.enter_sub);
 						WebElement fileUploadField = driver.findElement(By.xpath("//input[@id='MainContent_col_2_file_upload']")); // Replace with the actual locator
-						String filePath = "/home/chahetibhandari/ecliplesqa/CUBEautomation/image/testPIC.png"; // Replace with the actual file path
+						String filePath = propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 						depPages.filebtn.sendKeys(filePath);
 						depPages.click(depPages.submitbtn);
 						depPages.waitForAlertAndAccept();

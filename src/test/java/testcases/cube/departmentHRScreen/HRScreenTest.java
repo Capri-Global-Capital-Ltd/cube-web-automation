@@ -96,7 +96,7 @@ public class  HRScreenTest extends BaseFile {
 					test = extent.createTest(testCase);
 
 				try {
-					
+					driver.get("https://cubeuat.capriglobal.in:8012/Admin/Default.aspx");
 					hrPages.clickelement(hrPages.online_re);
 					Actions actions = new Actions(driver);
 					actions.scrollByAmount(1, 10000).perform(); // Scroll down by 500 pixels
@@ -128,7 +128,7 @@ public class  HRScreenTest extends BaseFile {
 						hrPages.EnterText(Remark,hrPages.remarks_HR);         
 						
 						WebElement fileUploadField = driver.findElement(By.xpath("/html/body/div[8]/div/form/div[3]/div[4]/fieldset/table/tbody/tr[2]/td[2]/input")); // Replace with the actual locator
-						String filePath = "/home/chahetibhandari/ecliplesqa/CUBEautomation/image/testPIC.png"; // Replace with the actual file path
+						String filePath = "Image"; // Replace with the actual file path
 						hrPages.filebtn.sendKeys(filePath);
 		   				Thread.sleep(2000);
 		   				hrPages.JavaScriptclick(hrPages.disapprovalBtn);
