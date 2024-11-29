@@ -115,16 +115,15 @@ public class  FinanceScreenTest extends BaseFile {
 
 					
 					actions.moveToElement(FinPages.Department_Control).perform();
-					Thread.sleep(2000); //hover 
+					 //hover 
 					
 					actions.moveToElement(FinPages.fin).perform();
-					Thread.sleep(2000); //hover 
+					//hover 
 					
 					FinPages.click(FinPages.pendingReq);
-					Thread.sleep(2000);
+					
 					
 					FinPages.click(FinPages.startclick);
-					Thread.sleep(2000);
 					
 					
 					if(testId.equals("1")) 
@@ -137,13 +136,13 @@ public class  FinanceScreenTest extends BaseFile {
 						FinPages.EnterText(Remark,FinPages.remarks_HR);         
 						
 						FinPages.JavaScriptclick(FinPages.approvalBtn);
-		   				Thread.sleep(2000);
+		   				
 		   				
 		   				FinPages.waitForAlertAndAccept();
 						driver.switchTo().defaultContent();
-						Thread.sleep(1000);
+						
 					
-					//FinPages.click(FinPages.exitbtn);
+				
 			}
 				else if(testId.equals("2")) {
 					
@@ -156,10 +155,10 @@ public class  FinanceScreenTest extends BaseFile {
 					FinPages.EnterText(Remark,FinPages.remarks_HR);         
 					
 					FinPages.JavaScriptclick(FinPages.disapprovalBtn);
-	   				Thread.sleep(2000);
+	   		
 	   				FinPages.waitForAlertAndAccept();
 					driver.switchTo().defaultContent();
-					Thread.sleep(1000);
+					
 						
 					}
 					else if(testId.equals("3")) {
@@ -174,16 +173,38 @@ public class  FinanceScreenTest extends BaseFile {
 					FinPages.EnterText(Remark,FinPages.remarks_HR);         
 					
 					FinPages.JavaScriptclick(FinPages.disapprovalBtn);
-	   				Thread.sleep(2000);
+	   				
 	   				
 	   				FinPages.waitForAlertAndAccept();
 					
 					
 					driver.switchTo().defaultContent();
-					Thread.sleep(1000);
+				
 					
-					FinPages.click(FinPages.exitbtn);
+					
 					}
+					else if(testId.equals("4")) {
+						
+						
+						List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
+						System.out.println("Number of iframes on the page: " + iframes.size());
+						driver.switchTo().frame("jsFrame"); 
+						
+						FinPages.EnterText(deptCode,FinPages.depCode);
+						FinPages.EnterText(subDeptCode,FinPages.SubdepCode);
+						FinPages.EnterText(Remark,FinPages.remarks_HR);         
+						
+						FinPages.JavaScriptclick(FinPages.disapprovalBtn);
+		   				
+		   				
+		   				FinPages.waitForAlertAndAccept();
+						
+						
+						driver.switchTo().defaultContent();
+					
+						
+						FinPages.click(FinPages.exitbtn);
+						}
 				}catch (org.openqa.selenium.NoSuchElementException e) {
 					
 					test.log(Status.SKIP, e.getMessage());

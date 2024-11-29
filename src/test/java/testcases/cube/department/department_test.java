@@ -188,7 +188,6 @@ public class  department_test extends BaseFile {
 				depPages.clickelement(depPages.select_drop);
 				driver.findElement(By.xpath("//*[text()='" + depType + "']")).click();
 				driver.findElement(By.xpath("//*[text()='" +  depName + "']")).click();
-				//Thread.sleep(2000);
 				depPages.click(depPages.sub_dep);
 				depPages.EnterText(enterSubname,depPages.enter_sub);
 				depPages.click(depPages.submitbtn);

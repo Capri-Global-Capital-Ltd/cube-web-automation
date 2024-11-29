@@ -29,7 +29,10 @@ public class FinanceScreen extends CommonKeyWords {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-
+	
+//	@FindBy(xpath = "/html/body/form/div[3]/div/div/div[1]/div[1]/div[5]/div/div/nav/ul/li[5]/a")
+//	public WebElement online_re;
+	
 	@FindBy(xpath = "//*[contains(text(),'Online Requisitions')]")
 	public WebElement online_re;
 	
