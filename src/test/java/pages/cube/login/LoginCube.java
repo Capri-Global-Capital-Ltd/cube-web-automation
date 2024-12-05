@@ -39,6 +39,8 @@ public class LoginCube extends CommonKeyWords {
 	@FindBy(xpath ="/html/body/form/div[3]/div[2]/div[2]/font")
 	public WebElement Error;
 	
+	@FindBy(xpath="//*[@id='headmenu1_Logoutcn1_lnklogout']")
+	public WebElement logout;
 	
 		public void openURL() throws Exception {
 		driver.navigate().to(propReader.getProp().get(PAGE_URL).toString().trim());
@@ -58,6 +60,9 @@ public class LoginCube extends CommonKeyWords {
 	public String loginCredential(String Email) {
 		enterText(LoginID, Email);
 		return Email;
+	}
+	public void clickelement(WebElement element) {
+		click (element);
 	}
 
 	public String passWord(String Password) {

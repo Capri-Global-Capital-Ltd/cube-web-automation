@@ -120,24 +120,19 @@ public class  FinanceScreenTest extends BaseFile {
 					actions.moveToElement(FinPages.fin).perform();
 					//hover 
 					
-					FinPages.click(FinPages.pendingReq);
-					
-					
+					FinPages.click(FinPages.pendingReq);					
 					FinPages.click(FinPages.startclick);
-					
-					
+
 					if(testId.equals("1")) 
 					{
 						List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
 						System.out.println("Number of iframes on the page: " + iframes.size());
 						driver.switchTo().frame("jsFrame"); 
+						
 						FinPages.EnterText(deptCode,FinPages.depCode);
 						FinPages.EnterText(subDeptCode,FinPages.SubdepCode);
 						FinPages.EnterText(Remark,FinPages.remarks_HR);         
-						
 						FinPages.JavaScriptclick(FinPages.approvalBtn);
-		   				
-		   				
 		   				FinPages.waitForAlertAndAccept();
 						driver.switchTo().defaultContent();
 						
@@ -173,17 +168,73 @@ public class  FinanceScreenTest extends BaseFile {
 					FinPages.EnterText(Remark,FinPages.remarks_HR);         
 					
 					FinPages.JavaScriptclick(FinPages.disapprovalBtn);
-	   				
-	   				
 	   				FinPages.waitForAlertAndAccept();
-					
-					
 					driver.switchTo().defaultContent();
 				
 					
 					
 					}
 					else if(testId.equals("4")) {
+						
+						
+						List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
+						System.out.println("Number of iframes on the page: " + iframes.size());
+						driver.switchTo().frame("jsFrame"); 
+						
+						FinPages.EnterText(deptCode,FinPages.depCode);
+						FinPages.EnterText(subDeptCode,FinPages.SubdepCode);
+						FinPages.EnterText(Remark,FinPages.remarks_HR);         
+						
+						FinPages.JavaScriptclick(FinPages.disapprovalBtn);
+		   				
+		   				
+		   				FinPages.waitForAlertAndAccept();
+						
+						
+						driver.switchTo().defaultContent();
+				
+						}
+					else if(testId.equals("5")) {
+						
+						
+						List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
+						System.out.println("Number of iframes on the page: " + iframes.size());
+						driver.switchTo().frame("jsFrame"); 
+						
+						FinPages.EnterText(deptCode,FinPages.depCode);
+						FinPages.EnterText(subDeptCode,FinPages.SubdepCode);
+						FinPages.EnterText(Remark,FinPages.remarks_HR);         
+						
+						FinPages.JavaScriptclick(FinPages.disapprovalBtn);
+		   				
+		   				
+		   				FinPages.waitForAlertAndAccept();
+						
+						
+						driver.switchTo().defaultContent();
+	
+						}
+					else if(testId.equals("6")) {
+						
+						
+						List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
+						System.out.println("Number of iframes on the page: " + iframes.size());
+						driver.switchTo().frame("jsFrame"); 
+						
+						FinPages.EnterText(deptCode,FinPages.depCode);
+						FinPages.EnterText(subDeptCode,FinPages.SubdepCode);
+						FinPages.EnterText(Remark,FinPages.remarks_HR);         
+						
+						FinPages.JavaScriptclick(FinPages.disapprovalBtn);
+		   				
+		   				
+		   				FinPages.waitForAlertAndAccept();
+						
+						
+						driver.switchTo().defaultContent();
+
+						}
+					else if(testId.equals("7")) {
 						
 						
 						List<WebElement> iframes = driver.findElements(By.tagName("iframe"));

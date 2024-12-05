@@ -133,6 +133,25 @@ public class CubeLoginTest extends BaseFile {
 						Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
 						Thread.sleep(2000);
 						}
+					else if(testId.equals("5")) {
+						
+						loginPage.passWord(passCred);
+						loginPage.loginCredential(emailCred);
+						loginPage.clickloginButton();
+						Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
+						Thread.sleep(2000);
+						
+						}
+				else if(testId.equals("6")) {
+					
+					loginPage.passWord(passCred);
+					loginPage.loginCredential(emailCred);
+					loginPage.clickloginButton();
+					//Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
+					Thread.sleep(2000);
+					//loginPage.logout();
+					}
+			
 				
 			}catch (org.openqa.selenium.NoSuchElementException e) {
 					// Capture the NoSuchElementException message
