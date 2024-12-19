@@ -42,6 +42,9 @@ public class LoginCube extends CommonKeyWords {
 	@FindBy(xpath="//*[@id='headmenu1_Logoutcn1_lnklogout']")
 	public WebElement logout;
 	
+	@FindBy(xpath="//*[@id='headmenu1_Logoutcn1_lnklogout']")
+	public WebElement logoutBtn;
+	
 		public void openURL() throws Exception {
 		driver.navigate().to(propReader.getProp().get(PAGE_URL).toString().trim());
 	}
@@ -75,5 +78,12 @@ public class LoginCube extends CommonKeyWords {
 	public boolean isElementdisplayed(WebElement element) {
 		return isDisplayed(element);
 	}
+
+	public void logoutBtn() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 
 }

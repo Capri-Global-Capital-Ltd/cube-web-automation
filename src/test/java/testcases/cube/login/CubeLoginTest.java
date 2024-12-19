@@ -148,8 +148,8 @@ public class CubeLoginTest extends BaseFile {
 					loginPage.loginCredential(emailCred);
 					loginPage.clickloginButton();
 					//Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
-					Thread.sleep(2000);
-					//loginPage.logout();
+
+					loginPage.logoutBtn();
 					}
 			
 				

@@ -141,8 +141,8 @@ public class FinanceloginTest extends BaseFile {
 					loginPage.loginCredential(emailCred);
 					loginPage.clickloginButton();
 					//Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
-					
-					loginPage.clickelement(loginPage.logout);
+
+					loginPage.logoutBtn();
 					}
 				
 			}catch (org.openqa.selenium.NoSuchElementException e) {
