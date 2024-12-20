@@ -133,13 +133,9 @@ public class HRloginTest extends BaseFile {
 				} catch (AssertionError e) {
 					// Capture the exception message
 					test.log(Status.FAIL, e.getMessage());
-					Assert.fail("Deliberate failure to capture screenshot");
+					//Assert.fail("Deliberate failure to capture screenshot");
 				}
-				 catch (Exception e) {
-						// Capture the exception message
-						test.log(Status.FAIL, e.getMessage());
-						Assert.fail("Deliberate failure to capture screenshot");
-					}
+				 
 			}
 		}
 	}

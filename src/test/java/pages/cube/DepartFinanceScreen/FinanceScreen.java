@@ -30,9 +30,6 @@ public class FinanceScreen extends CommonKeyWords {
 		PageFactory.initElements(driver, this);
 	}
 	
-//	@FindBy(xpath = "/html/body/form/div[3]/div/div/div[1]/div[1]/div[5]/div/div/nav/ul/li[5]/a")
-//	public WebElement online_re;
-	
 	@FindBy(xpath = "//*[contains(text(),'Online Requisitions')]")
 	public WebElement online_re;
 	
@@ -48,14 +45,15 @@ public class FinanceScreen extends CommonKeyWords {
 	@FindBy(xpath="/html/body/form/div[3]/div/div[2]/div[1]/div/div/div[2]/div[2]/div/div/table/tbody/tr[2]")
 	public WebElement startclick;
    
-	@FindBy(xpath="/html/body/div[8]/div/form/div[3]/div[4]/fieldset/table/tbody/tr[1]/td[2]/input")
+	@FindBy(xpath="/html/body/div[8]/div/form/div[3]/div[4]/fieldset/table/tbody/tr[2]/td[2]/input")
 	public WebElement depCode;
 	
 	
-	@FindBy(xpath="/html/body/div[8]/div/form/div[3]/div[4]/fieldset/table/tbody/tr[1]/td[4]/input")
+	@FindBy(xpath="/html/body/div[8]/div/form/div[3]/div[4]/fieldset/table/tbody/tr[2]/td[4]/input")
 	public WebElement SubdepCode;
 	
-	@FindBy(xpath="/html/body/div[8]/div/form/div[3]/div[4]/fieldset/table/tbody/tr[2]/td[2]/textarea")
+	@FindBy(xpath="/html/body/div[8]/div/form/div[3]/div[4]/fieldset/table/tbody/tr[3]/td[2]/textarea")
+					
 	public WebElement remarks_HR;
 	
 	@FindBy(xpath="/html/body/form/div[3]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[1]/ul[11]/li[30]/ul/li[1]/ul/li[2]/a")

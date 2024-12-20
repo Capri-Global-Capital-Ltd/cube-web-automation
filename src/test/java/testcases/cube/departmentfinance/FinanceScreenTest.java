@@ -94,7 +94,7 @@ public class  FinanceScreenTest extends BaseFile {
 				try {
 					JSONObject testData = (JSONObject) entry.getValue();
 					testCase = new String((String) testData.get("TEST_CASES")).toString();
-					deptCode = new String((String) testData.get("ERP Dept Code")).toString();
+					deptCode = new String((String) testData.get("ERP Sub Dept Name")).toString();
 			    	subDeptCode = new String((String) testData.get("ERP Sub Dept Code")).toString();
 					testId = new String ((String) testData.get("TEST_ID"));
 					Remark = new String((String) testData.get("Remarks")).toString();
