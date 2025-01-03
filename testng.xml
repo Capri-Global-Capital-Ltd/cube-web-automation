@@ -10,7 +10,15 @@
 		<parameter name="browser" value="chrome" />
 
 		<classes>
-	
+		<class name="testcases.cube.login.CubeLoginTest" />
+<class name="testcases.cube.department.department_test"/>
+<class name="testcases.cube.departmentHRLogin.HRloginTest"/>
+<class name="testcases.cube.departmentHRScreen.HRScreenTest"/>
+<class name="testcases.cube.departmentfinanceScreen.FinanceloginTest"/>
+<class name="testcases.cube.departmentfinance.FinanceScreenTest"/>
+<class name="testcases.cube.login.CubeLoginTest" />
+<class name="testcases.cube.driverLogin.TestLoginDriver"/> 
+<class name="testcases.cube.driverForm.TestdriverRegistration"/>
 		<class name="testcases.cube.salaryLogin.SalaryLogin" />
 		
 		</classes>
