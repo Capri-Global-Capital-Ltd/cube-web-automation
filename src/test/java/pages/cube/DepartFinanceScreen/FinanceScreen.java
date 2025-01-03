@@ -56,8 +56,8 @@ public class FinanceScreen extends CommonKeyWords {
 					
 	public WebElement remarks_HR;
 	
-	@FindBy(xpath="/html/body/form/div[3]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[1]/ul[11]/li[30]/ul/li[1]/ul/li[2]/a")
-	public WebElement FinArchive;
+//	@FindBy(xpath="/html/body/form/div[3]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[1]/ul[11]/li[30]/ul/li[1]/ul/li[2]/a")
+//	public WebElement FinArchive;
 	
 	@FindBy(xpath="//input[@id='mainContent_btnApprove']")
 	public WebElement approvalBtn;
