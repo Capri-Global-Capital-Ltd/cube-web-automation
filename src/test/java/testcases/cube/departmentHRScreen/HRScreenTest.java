@@ -113,12 +113,12 @@ public class  HRScreenTest extends BaseFile {
 						WebElement fileUploadField = driver.findElement(By.xpath("/html/body/div[8]/div/form/div[3]/div[4]/fieldset/table/tbody/tr[2]/td[2]/input")); // Replace with the actual locator
 						String filePath = propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 						//hrPages.filebtn.sendKeys(filePath);
-						Thread.sleep(2000);
+						
 						hrPages.JavaScriptclick(hrPages.approvalBtn);
-		   				//Thread.sleep(2000);
+		   			
 						hrPages.waitForAlertAndAccept();
 						driver.switchTo().defaultContent();
-						//Thread.sleep(1000);
+						
 			}
 				else if(testId.equals("2")) {
 				
@@ -126,11 +126,9 @@ public class  HRScreenTest extends BaseFile {
 						System.out.println("Number of iframes on the page: " + iframes.size());
 						driver.switchTo().frame("jsFrame"); 
 						hrPages.EnterText(Remark,hrPages.remarks_HR);         
-						
 						WebElement fileUploadField = driver.findElement(By.xpath("/html/body/div[8]/div/form/div[3]/div[4]/fieldset/table/tbody/tr[2]/td[2]/input")); // Replace with the actual locator
 						String filePath = propReader.getProp().get("Image").toString().trim();// Replace with the actual file path
 						//hrPages.filebtn.sendKeys(filePath);
-		   				Thread.sleep(2000);
 		   				hrPages.JavaScriptclick(hrPages.disapprovalBtn);
 						hrPages.waitForAlertAndAccept();
 						driver.switchTo().defaultContent();

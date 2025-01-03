@@ -106,7 +106,6 @@ public class SalaryLogin extends BaseFile {
 						loginPage.loginCredential(emailCred);
 						loginPage.clickloginButton();
 					
-					Thread.sleep(2000);
 					}
 					else if(testId.equals("3")) {
 					
@@ -114,7 +113,7 @@ public class SalaryLogin extends BaseFile {
 						loginPage.loginCredential(emailCred);
 						loginPage.clickloginButton();
 						Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
-						Thread.sleep(2000);
+					
 						}
 					else if(testId.equals("2")) {
 
@@ -130,7 +129,7 @@ public class SalaryLogin extends BaseFile {
 						loginPage.loginCredential(emailCred);
 						loginPage.clickloginButton();
 						Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
-						Thread.sleep(2000);
+					
 						}
 				
 			}catch (org.openqa.selenium.NoSuchElementException e) {

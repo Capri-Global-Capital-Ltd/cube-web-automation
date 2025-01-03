@@ -1,9 +1,10 @@
-package testcases.cube.departmentHRLogin;
+package testcases.cube.SalaryReimbursementLogin;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.json.simple.JSONObject;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -23,10 +24,10 @@ import pages.cube.login.LoginCube;
 import property.PropertyFile;
 import utility.BaseFile;
 
-public class HRloginTest extends BaseFile {
+public class testSalaryReimbursementLogin extends BaseFile {
 
-	private static final String TESTCASES_SHEET = "DEPARTMENT";
-	private static final String SHEET_NAME = "HR_SHEET";
+	private static final String TESTCASES_SHEET = "CUBESalaryremi";
+	private static final String SHEET_NAME = "DSalaryRemibus";
 	private ExtentReports extent;
 	private WebDriver driver;
 	private LoginCube loginPage;
@@ -51,7 +52,7 @@ public class HRloginTest extends BaseFile {
 
 	// This method is used to read from excel.
 
-	@DataProvider(name = "HRloginPageDataProvider")
+	@DataProvider(name = "FinloginPageDataProvider")
 	private Map<String, Object>[][] callTestDataFromExcel() throws Exception {
 		String testDataSheet = propReader.getProp().get(SHEET_NAME).toString().trim();
 		String filePath = System.getProperty("user.dir") + propReader.getProp().get(TESTCASES_SHEET).toString().trim();
@@ -67,8 +68,8 @@ public class HRloginTest extends BaseFile {
 		}
 	}
 
-	@Test(dataProvider = "HRloginPageDataProvider")
-	private void cubeHRLogin(Map<String, Object> fetchData) throws InterruptedException {
+	@Test(dataProvider = "FinloginPageDataProvider")
+	private void cubeFinanceLogin(Map<String, Object> fetchData) throws InterruptedException {
 
 		if (fetchData.entrySet() != null) {
 			for (Map.Entry<String, Object> entry : fetchData.entrySet()) {
@@ -97,17 +98,18 @@ public class HRloginTest extends BaseFile {
 
 				try {
 					if(testId.equals("1")) {
+
+					
 					loginPage.passWord(passCred);
 					loginPage.loginCredential(emailCred);
 					loginPage.clickloginButton();
-					
 					}
 					else if(testId.equals("3")) {
 						loginPage.passWord(passCred);
 						loginPage.loginCredential(emailCred);
 						loginPage.clickloginButton();
 						Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
-						
+					
 						}
 					else if(testId.equals("2")) {
 
@@ -115,15 +117,32 @@ public class HRloginTest extends BaseFile {
 						loginPage.passWord(passCred);
 						loginPage.clickloginButton();
 						Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
-					}
-					else if(testId.equals("4")) {
+					}else if(testId.equals("4")) {
+						
+						loginPage.passWord(passCred);
+						loginPage.loginCredential(emailCred);
+						loginPage.clickloginButton();
+						Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
+					
+						}
+					else if(testId.equals("5")) {
 						
 						loginPage.passWord(passCred);
 						loginPage.loginCredential(emailCred);
 						loginPage.clickloginButton();
 						Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
 						
+						
 						}
+				else if(testId.equals("6")) {
+					
+					loginPage.passWord(passCred);
+					loginPage.loginCredential(emailCred);
+					loginPage.clickloginButton();
+					//Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
+
+					loginPage.logoutBtn();
+					}
 				
 			}catch (org.openqa.selenium.NoSuchElementException e) {
 					// Capture the NoSuchElementException message
@@ -133,9 +152,13 @@ public class HRloginTest extends BaseFile {
 				} catch (AssertionError e) {
 					// Capture the exception message
 					test.log(Status.FAIL, e.getMessage());
-					//Assert.fail("Deliberate failure to capture screenshot");
+					Assert.fail("Deliberate failure to capture screenshot");
 				}
-				 
+				 catch (Exception e) {
+						// Capture the exception message
+						test.log(Status.FAIL, e.getMessage());
+						//Assert.fail("Deliberate failure to capture screenshot");
+					}
 			}
 		}
 	}

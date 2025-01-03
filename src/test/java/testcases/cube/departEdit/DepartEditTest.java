@@ -108,7 +108,7 @@ public class  DepartEditTest extends BaseFile {
 				try {
 					
 					dEdit.clickelement(dEdit.online_re);
-			         Thread.sleep(2000);
+			        ;
 				    
 					Actions actions = new Actions(driver);
 					actions.scrollByAmount(1, 10000).perform(); // Scroll down by 500 pixels
@@ -116,7 +116,7 @@ public class  DepartEditTest extends BaseFile {
 					actions.moveToElement(dEdit.Department_Control).perform();
 					//Thread.sleep(2000); //hover 
 					dEdit.clickelement(dEdit.Initiate);
-					Thread.sleep(2000);
+					
 					
 					WebElement element = driver.findElement(By.xpath("(//*[@value='Edit'])[1]"));
 					
@@ -128,20 +128,20 @@ public class  DepartEditTest extends BaseFile {
 					if(testId.equals("1")) {
 
 							dEdit.EnterText(subName,dEdit.editSubName);
-							Thread.sleep(2000);
+							
 	
 							dEdit.click(dEdit.updateBtn);
-							Thread.sleep(2000);
+							
 							
 							dEdit.waitForAlertAndAccept();
 					}
 
 					else if(testId.equals("2")) {
 							dEdit.EnterText(subName,dEdit.editSubName);
-							Thread.sleep(2000);
+							
 	
 							dEdit.click(dEdit.updateBtn);
-							Thread.sleep(2000);
+						
 							
 							dEdit.waitForAlertAndAccept();
 

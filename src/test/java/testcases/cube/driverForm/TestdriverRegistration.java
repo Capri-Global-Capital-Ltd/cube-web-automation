@@ -126,25 +126,20 @@ public class  TestdriverRegistration extends BaseFile
 						driverPages.click(driverPages.Company_Driver_Management);
 						Thread.sleep(2000); //hover 
 						driverPages.click(driverPages.DriverRegistrationForm);
-						Thread.sleep(2000);
-							
-						
 						String projectDir = System.getProperty("user.dir");
 						 String relativePath = "/PHOTO/PIC.png";
 						if(testId.equals("3")) {
 							
 						driverPages.EnterText(driverName,driverPages.driverName);
-						Thread.sleep(2000);
-					
 						driverPages.click(driverPages.DOB);
 						driverPages.click(driverPages.month);
 						driverPages.click(driverPages.year);
 						driverPages.click(driverPages.date);
-						Thread.sleep(2000);
+						
 						driverPages.EnterText(address,driverPages.address);
-						Thread.sleep(2000);
+						
 						driverPages.EnterText(mobileNo,driverPages.mobileNo);
-						Thread.sleep(2000);
+						
 						driverPages.EnterText(dl,driverPages.DLNO);
 						//depPages.EnterText(dlIssused,depPages.issueDate);
 						driverPages.click(driverPages.issueDate);
@@ -153,29 +148,27 @@ public class  TestdriverRegistration extends BaseFile
 						driverPages.click(driverPages.issueDatedate);
 						
 						driverPages.click(driverPages.dlexpiryClan);
-						Thread.sleep(2000);
-						driverPages.click(driverPages.dlexpmonth);
-						Thread.sleep(2000);
-						driverPages.click(driverPages.dlexpcladates);
-						Thread.sleep(2000);
 						
-						 
+						driverPages.click(driverPages.dlexpmonth);
+						
+						driverPages.click(driverPages.dlexpcladates);
+
 						String filePath = propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 						driverPages.aadharupload.sendKeys(projectDir + relativePath);
 						
-						Thread.sleep(2000);
+						
 						
 						String filePath1 = propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 						driverPages.dlupload.sendKeys(projectDir + relativePath);
-						Thread.sleep(2000);
+						
 									
 						String filePath2 = propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 						driverPages.bankStat.sendKeys(projectDir + relativePath);
-						Thread.sleep(2000);
+				
 						
 						String filePath3= propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 						driverPages.driverPhoto.sendKeys(projectDir + relativePath);
-						Thread.sleep(2000);
+						
 						
 						driverPages.EnterText(remarks,driverPages.remark);
 						driverPages.click(driverPages.submitbtn);
@@ -185,17 +178,12 @@ public class  TestdriverRegistration extends BaseFile
 						if(testId.equals("2")) {
 							
 							driverPages.EnterText(driverName,driverPages.driverName);
-							Thread.sleep(2000);
-						
 							driverPages.click(driverPages.DOB);
 							driverPages.click(driverPages.month);
 							driverPages.click(driverPages.year);
 							driverPages.click(driverPages.date);
-							Thread.sleep(2000);
 							driverPages.EnterText(address,driverPages.address);
-							Thread.sleep(2000);
 							driverPages.EnterText(mobileNo,driverPages.mobileNo);
-							Thread.sleep(2000);
 							driverPages.EnterText(dl,driverPages.DLNO);
 							//depPages.EnterText(dlIssused,depPages.issueDate);
 							driverPages.click(driverPages.issueDate);
@@ -204,29 +192,21 @@ public class  TestdriverRegistration extends BaseFile
 							driverPages.click(driverPages.issueDatedate);
 							
 							driverPages.click(driverPages.dlexpiryClan);
-							Thread.sleep(2000);
 							driverPages.click(driverPages.dlexpmonth);
-							Thread.sleep(2000);
+							
 							driverPages.click(driverPages.dlexpcladates);
-							Thread.sleep(2000);
+						
 							
 							String filePath = propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 							driverPages.aadharupload.sendKeys(projectDir + relativePath);
-							
-							Thread.sleep(2000);
-							
+				
 							String filePath1 = propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 							driverPages.dlupload.sendKeys(projectDir + relativePath);
-							Thread.sleep(2000);
-										
+				
 							String filePath2 = propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 							driverPages.bankStat.sendKeys(projectDir + relativePath);
-							Thread.sleep(2000);
-							
 							String filePath3= propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 							driverPages.driverPhoto.sendKeys(projectDir + relativePath);
-							Thread.sleep(2000);
-							
 							driverPages.EnterText(remarks,driverPages.remark);
 							driverPages.click(driverPages.submitbtn);
 							driverPages.waitForAlertAndAccept();
@@ -241,10 +221,10 @@ public class  TestdriverRegistration extends BaseFile
 							driverPages.click(driverPages.month);
 							driverPages.click(driverPages.year);
 							driverPages.click(driverPages.date);
-							Thread.sleep(2000);
+							
 
 							driverPages.EnterText(mobileNo,driverPages.mobileNo);
-							Thread.sleep(2000);
+						
 							driverPages.EnterText(dl,driverPages.DLNO);
 							
 							driverPages.click(driverPages.issueDate);
@@ -253,53 +233,48 @@ public class  TestdriverRegistration extends BaseFile
 							driverPages.click(driverPages.issueDatedate);
 							
 							driverPages.click(driverPages.dlexpiryClan);
-							Thread.sleep(2000);
+						
 							driverPages.click(driverPages.dlexpmonth);
-							Thread.sleep(2000);
+						
 							driverPages.click(driverPages.dlexpcladates);
-							Thread.sleep(2000);
-							
+						
+						
 							String filePath = propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 							driverPages.aadharupload.sendKeys(projectDir + relativePath);
-							
-							Thread.sleep(2000);
-							
+						
 							String filePath1 = propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 							driverPages.dlupload.sendKeys(projectDir + relativePath);
-							Thread.sleep(2000);
-										
+			
 							String filePath2 = propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 							driverPages.bankStat.sendKeys(projectDir + relativePath);
-							Thread.sleep(2000);
-							
+						
 							String filePath3= propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 							driverPages.driverPhoto.sendKeys(projectDir + relativePath);
-							Thread.sleep(2000);
 							
 							driverPages.EnterText(remarks,driverPages.remark);
 							driverPages.click(driverPages.submitbtn);
 							driverPages.waitForAlertAndAccept();
-							Thread.sleep(5000);
+						
 							driverPages.EnterText(address,driverPages.address);
 							
 							driverPages.click(driverPages.submitbtn);
-							Thread.sleep(2000);
+							
 							driverPages.waitForAlertAndAccept();
 							}
 						if(testId.equals("4")) {
 							
 							driverPages.EnterText(driverName,driverPages.driverName);
-							Thread.sleep(2000);
+							
 						
 							driverPages.click(driverPages.DOB);
 							driverPages.click(driverPages.month);
 							driverPages.click(driverPages.year);
 							driverPages.click(driverPages.date);
 							driverPages.EnterText(address,driverPages.address);
-							Thread.sleep(2000);
+							
 
 							driverPages.EnterText(mobileNo,driverPages.mobileNo);
-							Thread.sleep(2000);
+							
 							driverPages.EnterText(dl,driverPages.DLNO);
 							
 							driverPages.click(driverPages.issueDate);
@@ -308,37 +283,33 @@ public class  TestdriverRegistration extends BaseFile
 							driverPages.click(driverPages.issueDatedate);
 							
 							driverPages.click(driverPages.dlexpiryClan);
-							Thread.sleep(2000);
+							
 							driverPages.click(driverPages.dlexpmonth);
-							Thread.sleep(2000);
+						
 							driverPages.click(driverPages.dlexpcladates);
-							Thread.sleep(2000);
+							
 							
 							String filePath = propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 							driverPages.aadharupload.sendKeys(projectDir + relativePath);
-							
-							Thread.sleep(2000);
-							
+					
 							String filePath1 = propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 							driverPages.dlupload.sendKeys(projectDir + relativePath);
-							Thread.sleep(2000);
+				
 										
 							String filePath2 = propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 							driverPages.bankStat.sendKeys(projectDir + relativePath);
-							Thread.sleep(2000);
+						
 							
 							String filePath3= propReader.getProp().get("Image").toString().trim(); // Replace with the actual file path
 							driverPages.driverPhoto.sendKeys(projectDir + relativePath);
-							Thread.sleep(2000);
-							
-							
+						
 							driverPages.click(driverPages.submitbtn);
 							driverPages.waitForAlertAndAccept();
-							Thread.sleep(5000);
+						
 							driverPages.EnterText(remarks,driverPages.remark);
 							
 							driverPages.click(driverPages.submitbtn);
-							Thread.sleep(2000);
+							
 							driverPages.waitForAlertAndAccept();
 							}
 						

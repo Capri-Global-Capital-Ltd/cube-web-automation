@@ -102,8 +102,7 @@ public class TestLoginDriver extends BaseFile {
 						loginPage.passWord(passCred);
 						loginPage.loginCredential(emailCred);
 						loginPage.clickloginButton();
-					
-					Thread.sleep(2000);
+				
 					}
 					else if(testId.equals("3")) {
 					
@@ -111,7 +110,7 @@ public class TestLoginDriver extends BaseFile {
 						loginPage.loginCredential(emailCred);
 						loginPage.clickloginButton();
 						Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
-						Thread.sleep(2000);
+					
 						}
 					else if(testId.equals("2")) {
 
@@ -127,7 +126,7 @@ public class TestLoginDriver extends BaseFile {
 						loginPage.loginCredential(emailCred);
 						loginPage.clickloginButton();
 						Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
-						Thread.sleep(2000);
+						
 						}
 //					else if(testId.equals("5")) {
 //							

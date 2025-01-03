@@ -24,7 +24,7 @@ public class BrowserFactory {
 			options.addArguments("--incognito");
 			options.addArguments("--disable-extensions");
 			 options.addArguments("--ignore-certificate-errors");
-	options.addArguments("--headless");
+	//options.addArguments("--headless");
 //			options.addArguments("--disable-gpu"); // Disable GPU hardware acceleration
 //			options.addArguments("--no-sandbox"); // Added for Linux to avoid sandbox issues
 //			options.addArguments("--disable-dev-shm-usage"); // Overcome limited resource problems
