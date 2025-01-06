@@ -1,4 +1,4 @@
-package testcases.cube.departmentfinanceScreen;
+package testcases.cube.LoanStatinoaryLogin;
 
 import java.util.HashMap;
 import java.util.List;
@@ -25,10 +25,10 @@ import pages.cube.login.LoginCube;
 import property.PropertyFile;
 import utility.BaseFile;
 
-public class FinanceloginTest extends BaseFile {
+public class TestCasesLoanStationaryLogin extends BaseFile {
 
-	private static final String TESTCASES_SHEET = "DEPARTMENT";
-	private static final String SHEET_NAME = "FINANCE_SHEET";
+	private static final String TESTCASES_SHEET = "CUBELOAN";
+	private static final String SHEET_NAME = "LOANSTATINAORY";
 	private ExtentReports extent;
 	private WebDriver driver;
 	private LoginCube loginPage;
@@ -153,13 +153,9 @@ public class FinanceloginTest extends BaseFile {
 				} catch (AssertionError e) {
 					// Capture the exception message
 					test.log(Status.FAIL, e.getMessage());
-					//Assert.fail("Deliberate failure to capture screenshot");
+					Assert.fail("Deliberate failure to capture screenshot");
 				}
-//				 catch (Exception e) {
-//						// Capture the exception message
-//						test.log(Status.FAIL, e.getMessage());
-//						//Assert.fail("Deliberate failure to capture screenshot");
-//					}
+				
 			}
 		}
 	}
