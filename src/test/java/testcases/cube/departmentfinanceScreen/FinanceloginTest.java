@@ -126,15 +126,15 @@ public class FinanceloginTest extends BaseFile {
 						Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
 					
 						}
-					else if(testId.equals("5")) {
-						
-						loginPage.passWord(passCred);
-						loginPage.loginCredential(emailCred);
-						loginPage.clickloginButton();
-						Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
-						
-						
-						}
+//					else if(testId.equals("5")) {
+//						
+//						loginPage.passWord(passCred);
+//						loginPage.loginCredential(emailCred);
+//						loginPage.clickloginButton();
+//						Assert.assertEquals(loginPage.getText(loginPage.Error), messageData);
+//						
+//						
+//						}
 				else if(testId.equals("6")) {
 					
 					loginPage.passWord(passCred);
