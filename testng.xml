@@ -22,8 +22,9 @@
 <class name="testcases.cube.driverLogin.TestLoginDriver"/> 
 <class name="testcases.cube.driverForm.TestdriverRegistration"/>
 <class name="testcases.cube.salaryLogin.SalaryLogin" />
+			<class name="testcases.cube.SalaryReimbursementLogin.testSalaryReimbursementLogin"/>
 <class name="testcases.cube.LoanStatinoaryLogin.TestCasesLoanStationaryLogin"/>
-<class name="testcases.cube.SalaryReimbursementLogin.testSalaryReimbursementLogin"/>
+
 
 
 		
